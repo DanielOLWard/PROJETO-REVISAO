@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Projeto Revisao/1.0.0": {
+        "runtime": {
+          "Projeto Revisao.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Projeto Revisao/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
