@@ -12,3 +12,4 @@ C:\Users\Fic\Documents\VS 2022\ProjetoRevisao\PROJETO REVISAO\obj\Debug\net9.0\r
 C:\Users\Fic\Documents\VS 2022\ProjetoRevisao\PROJETO REVISAO\obj\Debug\net9.0\Projeto Revisao.pdb
 C:\Users\Fic\Documents\VS 2022\ProjetoRevisao\PROJETO REVISAO\obj\Debug\net9.0\Projeto Revisao.genruntimeconfig.cache
 C:\Users\Fic\Documents\VS 2022\ProjetoRevisao\PROJETO REVISAO\obj\Debug\net9.0\ref\Projeto Revisao.dll
+C:\Users\Fic\Documents\VS 2022\ProjetoRevisao\PROJETO REVISAO\obj\Debug\net9.0\Projeto Revisao.sourcelink.json

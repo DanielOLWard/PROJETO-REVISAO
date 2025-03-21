@@ -3,28 +3,63 @@
 using System.ComponentModel;
 
 int[] Notas = new int[6];
-int tNotas;
-double Media;
-int Resultado;
-Console.WriteLine("Gerenciador de notas dos alunos");
+double TNotas = 0.0;
+double Media = 0.0;
+double Resultado = 0.0;
+bool verificacao = true;
+Console.WriteLine("=== GERENCIADOR DE NOTAS ===");
 for (int i = 1; i < Notas.Length; i++)
 {
-    try
+    do     //Metodo denrepeticao caso o usuario insira uma nota "invalida"
     {
-        Console.Write($"Digite a {i}ª nota: ");
-        Notas[i] = int.Parse(Console.ReadLine());
-        if (Notas[i] < 0 || Notas[i] > 10)
+        try
         {
-            throw new OverflowException();
+         Console.Write($"Digite a {i}ª nota: ");
+         Notas[i] = int.Parse(Console.ReadLine());
+            if (Notas[i] < 0 || Notas[i] > 10)
+            {
+                throw new OverflowException();
+                verificacao = false;
+            }
         }
-        else
+        catch (OverflowException ex)
         {
-            Console.Write($"Digite a {i}ª nota: ");
-            Notas[i] = int.Parse(Console.ReadLine());
+            Console.WriteLine("Insira uma nota entre 0 e 10");
+            i--;
         }
-    }
-    catch (OverflowException ex)
-    {
-        Console.WriteLine("Insira uma nota entre 0 e 10");
-    }
+        catch (FormatException ex)
+        {
+            Console.WriteLine("Insira apenas numeros");
+            i--;
+        }
+        catch (ArgumentNullException ex)
+        {
+            Console.WriteLine("Insira uma nota");
+            i--;
+        }
+    } while (verificacao == false) ;
+}
+Console.WriteLine();
+Console.WriteLine("Notas do aluno:");
+for (int i = 1; i < Notas.Length; i++)
+{
+    Console.Write($" {Notas[i]} ");
+}
+Console.WriteLine();
+for (int i = 0; i < Notas.Length; i++)
+{
+    TNotas += Notas[i];
+}
+Console.WriteLine();
+Media = TNotas / 5;
+Console.WriteLine($"A media do aluno e: {Media}");
+Console.WriteLine();
+Resultado = Media;
+if  (Media >= 7)
+{
+    Console.WriteLine("O aluno foi APROVADO!");
+}
+else
+{
+    Console.WriteLine("O aluno foi REPROVADO!");
 }
